@@ -1,50 +1,101 @@
-# React + TypeScript + Vite
+# Documentation Assistant - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application that helps generate professional documentation for your code using AI. Built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Generate documentation for various code types (Functions, APIs, Error Handling, etc.)
+- Multiple documentation style guides (Google, NumPy, Sphinx)
+- Real-time preview
+- Responsive design
+- Dark mode interface
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have the following installed:
+- Node.js (v16 or higher)
+- npm or yarn
+- Git
 
-- Configure the top-level `parserOptions` property like this:
+## Setup Instructions
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd doc-assistant/frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
 ```
+
+3. Create a `.env` file in the root directory:
+```bash
+echo "VITE_API_URL=http://localhost:8000" > .env
+```
+
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application should now be running at `http://localhost:5173`
+
+## Project Structure
+
+```
+frontend/
+├── src/
+│   ├── components/    # React components
+│   ├── config/        # Configuration files
+│   ├── lib/           # Utility functions and API clients
+│   ├── types/         # TypeScript type definitions
+│   └── env.d.ts       # Environment variable types
+├── .env              # Environment variables
+├── vite.config.ts    # Vite configuration
+└── tsconfig.json     # TypeScript configuration
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build locally
+
+## Environment Variables
+
+- `VITE_API_URL` - Backend API URL (default: http://localhost:8000)
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. **"Module not found" errors**
+   - Ensure all dependencies are installed
+   - Try deleting `node_modules` and running `npm install` again
+
+2. **Environment variable issues**
+   - Make sure `.env` file exists and has the correct values
+   - Restart the development server after changing environment variables
+
+3. **CORS errors**
+   - Ensure the backend server is running
+   - Check that the `VITE_API_URL` matches your backend URL
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add YourFeature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+## License
+
+[MIT]
