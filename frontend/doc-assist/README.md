@@ -19,10 +19,9 @@ Before you begin, ensure you have the following installed:
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. Clone the repository from root of the repo, if not already done:
 ```bash
-git clone <your-repo-url>
-cd doc-assistant/frontend
+cd doc-assistant/frontend/doc-assist
 ```
 
 2. Install dependencies:

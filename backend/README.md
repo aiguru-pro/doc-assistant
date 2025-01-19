@@ -19,9 +19,8 @@ Before you begin, ensure you have the following installed:
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. Clone the repository, if not alread done, from the root of the repo:
 ```bash
-git clone <your-repo-url>
 cd doc-assistant/backend
 ```
 
