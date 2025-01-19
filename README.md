@@ -2,7 +2,7 @@
 
 An AI-powered documentation generator that helps create professional documentation for your code. Built with React + TypeScript for the frontend and FastAPI + OpenAI for the backend.
 
-![Documentation Assistant Screenshot](screenshot.png)
+![Documentation Assistant Screenshot](images/screenshot.png)
 
 ## Features
 
