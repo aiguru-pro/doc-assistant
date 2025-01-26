@@ -55,7 +55,7 @@ python main.py
 3. **Setup Frontend**
 ```bash
 # Open a new terminal
-cd frontend
+cd frontend/doc-assist
 
 # Install dependencies
 npm install
